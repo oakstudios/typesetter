@@ -35,8 +35,8 @@
 			// add triggers
 			$this.live('focus', function() {
 				var $this = $(this);
-				$this.data('enter', $this.html());
-				$this.data('before', $this.html());
+				$this.data('enter', $this.text());
+				$this.data('before', $this.text());
 				return $this;
 			}).live('keyup paste', function() {
 				var $this = $(this);
@@ -50,7 +50,7 @@
 				return $this;
 			}).live('blur', function() {
 				var $this = $(this);
-				var text = $this.html();
+				var text = $this.text();
 				if ($this.data('enter') !== text) {
 					$this.data('enter', text);
 					var data = {};
