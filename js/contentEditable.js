@@ -40,7 +40,7 @@
 				return $this;
 			}).live('keyup paste', function() {
 				var $this = $(this);
-				var text = $this.html();
+				var text = $this.text();
 				if ($this.data('before') !== text) {
 					$this.data('before', text);
 					var data = {};
