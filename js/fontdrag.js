@@ -97,6 +97,7 @@ document.createElement('span'),
 document.createElement('em')
 ];
 
+// domElements[0].className = "ui-state-default";
 domElements[1].className = "name";
 domElements[2].className = "size";
 domElements[3].className = "ss-icon delete";
