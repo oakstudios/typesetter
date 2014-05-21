@@ -45,4 +45,43 @@ $(document).ready(function() {
     }
   });
 
+  $(document).keydown(function(e) {
+    var $activefont = $('#fonts .active'),
+        $first = $('#fonts li:first'),
+        $last = $('#fonts li:last');
+
+    if ($(".textline").is(":not(:focus)")) {    
+
+      switch(e.which) {
+        case 37: // left
+          if ($activefont.closest("li").prev("li").length) {
+            TCNDDF.updateActiveFont($activefont.closest("li").prev()[0]);
+          } else {
+            TCNDDF.updateActiveFont($last[0]);
+          }
+        break;
+
+        case 38: // up
+          TCNDDF.updateActiveFont($first[0]);
+        break;
+
+        case 39: // right
+          if ($activefont.closest("li").next("li").length) {
+            TCNDDF.updateActiveFont($activefont.closest("li").next()[0]);
+          } else {
+            TCNDDF.updateActiveFont($first[0]);
+          }
+        break;
+
+        case 40: // down
+          TCNDDF.updateActiveFont($last[0]);
+        break;
+
+        default: return; // exit this handler for other keys
+      }
+
+      e.preventDefault(); // prevent the default action (scroll / move caret)
+    }
+  });
+
 });
