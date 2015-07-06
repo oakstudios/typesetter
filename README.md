@@ -1,7 +1,7 @@
 Typesetter
 =================
 
-Stable releases available for use at http://www.typesetter.symbolset.com/
+Stable releases available for use at http://typesetter.symbolset.com/
 
 The Font Testing Page is a tool primarily intended for type designers and independent foundries to 'Drag and Drop' their work in progress into a browser. It can also be used by art directors, graphic designers, teachers and students interested in seeing how a typeface works on the web.
 
